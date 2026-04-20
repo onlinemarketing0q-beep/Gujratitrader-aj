@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Gujrati Trader</title>
+<title>Gujarati Trader</title>
 <style>
 body{
     margin:0;
@@ -96,7 +96,7 @@ p{
     <h1>Gujarati Trader 📈</h1>
     <p>Daily Intraday & Options Calls | BankNifty & Nifty</p>
 
-    <a href="https://t.me/+KB7VDXpgU9wwYTM1" class="btn">🚀 Join Free Telegram</a>
+    <a href="https://t.me/yourlink" class="btn">🚀 Join Free Telegram</a>
 
     <div class="box">
         <h3>✔️ 10,000+ Traders Joined</h3>
@@ -114,11 +114,11 @@ p{
         <p class="counter" id="count">120 Users Watching</p>
     </div>
 
-    <a href="https://t.me/+KB7VDXpgU9wwYTM1" class="btn">👉 Join Now</a>
+    <a href="https://t.me/yourlink" class="btn">👉 Join Now</a>
 </div>
 
 <div class="sticky">
-    <a href="https://t.me/+KB7VDXpgU9wwYTM1" class="btn">🔥 Join Telegram Now</a>
+    <a href="https://t.me/yourlink" class="btn">🔥 Join Telegram Now</a>
 </div>
 
 <!-- EXIT POPUP -->
@@ -126,7 +126,7 @@ p{
     <div class="popup-content">
         <h2>Wait! 🚨</h2>
         <p>Free Trading Calls Miss Mat Karo</p>
-        <a href="https://t.me/+KB7VDXpgU9wwYTM1" class="btn">Join Now</a>
+        <a href="https://t.me/yourlink" class="btn">Join Now</a>
     </div>
 </div>
 
@@ -137,9 +137,27 @@ setInterval(()=>{
     document.getElementById("count").innerText = count + " Users Watching";
 },2000);
 
-// Exit Intent Popup
+// Exit Intent Popup (Desktop + Mobile)
 let shown = false;
+
+// Desktop (mouse leave)
 document.addEventListener("mouseleave", function(){
+    if(!shown){
+        document.getElementById("popup").style.display = "flex";
+        shown = true;
+    }
+});
+
+// Mobile (scroll trigger)
+window.addEventListener("scroll", function(){
+    if(!shown && window.scrollY > 200){
+        document.getElementById("popup").style.display = "flex";
+        shown = true;
+    }
+});
+
+// Mobile (back button simulation)
+window.addEventListener("popstate", function(){
     if(!shown){
         document.getElementById("popup").style.display = "flex";
         shown = true;
