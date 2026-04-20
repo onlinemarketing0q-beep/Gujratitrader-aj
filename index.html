@@ -4,249 +4,148 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Gujarati Trader</title>
-<!-- Meta Pixel Code -->
-<script>
-!function(f,b,e,v,n,t,s)
-{if(f.fbq)return;n=f.fbq=function(){n.callMethod?
-n.callMethod.apply(n,arguments):n.queue.push(arguments)};
-if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
-n.queue=[];t=b.createElement(e);t.async=!0;
-t.src=v;s=b.getElementsByTagName(e)[0];
-s.parentNode.insertBefore(t,s)}(window, document,'script',
-'https://connect.facebook.net/en_US/fbevents.js');
-fbq('init', '2144244313095019');
-fbq('track', 'PageView');
-</script>
-<noscript><img height="1" width="1" style="display:none"
-src="https://www.facebook.com/tr?id=2144244313095019&ev=PageView&noscript=1"
-/></noscript>
-<!-- End Meta Pixel Code -->
 <style>
-*{
-    margin:0;
-    padding:0;
-    box-sizing:border-box;
-    font-family:'Segoe UI',sans-serif;
-}
-
 body{
-    background:#000;
-    min-height:100vh;
-    display:flex;
-    justify-content:center;
-    align-items:center;
-}
-
-/* CARD */
-.card{
-    width:100%;
-    max-width:390px;
-    background:linear-gradient(180deg,#0e1422,#070b14);
-    border-radius:22px;
-    padding:32px 22px;
+    margin:0;
+    font-family:Arial, sans-serif;
+    background:#0b0f1a;
+    color:#fff;
     text-align:center;
-    position:relative;
-    overflow:hidden;
-    box-shadow:0 0 40px rgba(212,175,55,.22);
+}
+.container{
+    padding:20px;
+}
+.logo{
+    width:130px;
+    margin:20px auto;
+    display:block;
+    filter:drop-shadow(0 0 15px gold);
+    animation:glow 2s infinite alternate;
 }
 
-/* GOLD ROTATING BORDER */
-.card::before{
-    content:"";
-    position:absolute;
-    inset:-2px;
-    background:conic-gradient(from 0deg,#d4af37,transparent,#d4af37);
-    animation:rotate 7s linear infinite;
-    z-index:-1;
+@keyframes glow{
+    0%{filter:drop-shadow(0 0 5px gold);} 
+    100%{filter:drop-shadow(0 0 25px gold);} 
 }
-
-@keyframes rotate{
-    100%{transform:rotate(360deg);}
-}
-
-/* LOGO */
-.logo-wrap{
-    width:140px;
-    height:140px;
-    border-radius:50%;
-    padding:6px;
-    margin:0 auto 18px;
-    background:linear-gradient(135deg,#1e3c72,#d4af37);
-}
-
-.logo-wrap img{
-    width:100%;
-    height:100%;
-    border-radius:50%;
-    object-fit:cover;
-    background:#000;
-}
-
-/* BARS */
-.bars{
-    display:flex;
-    justify-content:center;
-    gap:8px;
-    margin-bottom:18px;
-}
-
-.bar{
-    width:14px;
-    border-radius:4px;
-    animation:jump 1.2s infinite ease-in-out;
-}
-
-.bar:nth-child(2){animation-delay:.2s}
-.bar:nth-child(3){animation-delay:.4s}
-.bar:nth-child(4){animation-delay:.6s}
-.bar:nth-child(5){animation-delay:.8s}
-
-.blue{background:#2f6df6;height:42px;}
-.gold{background:#d4af37;height:30px;}
-
-@keyframes jump{
-    50%{transform:scaleY(1.4);}
-}
-
-/* TEXT */
 h1{
-    color:#fff;
-    font-size:26px;
-    letter-spacing:1px;
+    font-size:32px;
+    color:#FFD700;
 }
-
-.sub{
-    color:#2f6df6;
-    margin:8px 0 20px;
-    font-size:15px;
+p{
+    color:#ccc;
 }
-
-/* LIVE COUNTER */
-.counter{
-    color:#d4af37;
-    font-size:18px;
-    font-weight:600;
-    margin-bottom:20px;
-}
-
-/* TELEGRAM BUTTON */
 .btn{
-    display:inline-flex;
-    align-items:center;
-    justify-content:center;
-    gap:6px;
-    background:linear-gradient(135deg,#2f6df6,#1e3c72);
-    color:#fff;
-    padding:15px 32px;
+    display:inline-block;
+    padding:15px 25px;
+    margin-top:20px;
+    background:linear-gradient(45deg,#FFD700,#00ff9d);
+    color:#000;
+    font-weight:bold;
     border-radius:30px;
-    font-weight:700;
     text-decoration:none;
     animation:heartbeat 1.5s infinite;
-    box-shadow:0 0 28px rgba(47,109,246,.55);
+    box-shadow:0 0 15px rgba(255,215,0,0.6);
 }
-
-.btn span{
-    font-size:20px;
-    animation:pulsePlus 1s infinite;
-}
-
 @keyframes heartbeat{
-    0%,100%{transform:scale(1);}
-    50%{transform:scale(1.08);}
+    0%{transform:scale(1);} 
+    50%{transform:scale(1.1);} 
+    100%{transform:scale(1);} 
 }
-
-@keyframes pulsePlus{
-    50%{transform:scale(1.4);}
+.box{
+    background:#111827;
+    margin:15px;
+    padding:15px;
+    border-radius:12px;
+    box-shadow:0 0 10px rgba(0,0,0,0.5);
 }
-
-/* POINTS */
-.list{
-    margin-top:26px;
-    text-align:left;
-}
-
-.list p{
-    color:#cfd8dc;
-    font-size:14px;
-    margin-bottom:14px;
-    padding-left:18px;
-    position:relative;
-}
-
-.list p::before{
-    content:"•";
-    position:absolute;
-    left:0;
-    top:-4px;
-    color:#2f6df6;
+.counter{
     font-size:22px;
+    color:#00ff9d;
 }
-
-/* DISCLAIMER */
-.disclaimer{
-    margin-top:22px;
-    font-size:11px;
-    color:#7a8a9a;
-    line-height:1.5;
+.sticky{
+    position:fixed;
+    bottom:10px;
+    left:0;
+    right:0;
+}
+.popup{
+    position:fixed;
+    top:0;
+    left:0;
+    width:100%;
+    height:100%;
+    background:rgba(0,0,0,0.8);
+    display:none;
+    align-items:center;
+    justify-content:center;
+}
+.popup-content{
+    background:#111827;
+    padding:20px;
+    border-radius:10px;
 }
 </style>
 </head>
-
 <body>
 
-<div class="card">
+<div class="container">
 
     <!-- LOGO -->
-    <div class="logo-wrap">
-        <img src="logo.png" alt="Gujarati Trader">
+    <img src="logo.png" alt="Gujarati Trader Logo" class="logo">
+
+    <h1>Gujarati Trader 📈</h1>
+    <p>Daily Intraday & Options Calls | BankNifty & Nifty</p>
+
+    <a href="https://t.me/+KB7VDXpgU9wwYTM1" class="btn">🚀 Join Free Telegram</a>
+
+    <div class="box">
+        <h3>✔️ 10,000+ Traders Joined</h3>
+        <h3>✔️ High Accuracy Calls</h3>
+        <h3>✔️ Live Market Updates</h3>
     </div>
 
-    <!-- BARS -->
-    <div class="bars">
-        <div class="bar blue"></div>
-        <div class="bar gold"></div>
-        <div class="bar blue"></div>
-        <div class="bar gold"></div>
-        <div class="bar blue"></div>
+    <div class="box">
+        <h2>Today's Result</h2>
+        <p>+2,150 Profit (Sample)</p>
     </div>
 
-    <h1>GUJRATI TRADER</h1>
-    <div class="sub">BankNifty • Nifty • Stock Options</div>
-
-    <!-- LIVE COUNTER -->
-    <div class="counter">
-        👥 Live Members: <span id="count">33856</span>+
+    <div class="box">
+        <h2>⏰ Limited Free Access</h2>
+        <p class="counter" id="count">120 Users Watching</p>
     </div>
 
-    <!-- BUTTON -->
-    <a href="https://t.me/+KB7VDXpgU9wwYTM1" class="btn">
-        Join Telegram <span>+</span>
-    </a>
-
-    <!-- POINTS -->
-    <div class="list">
-        <p>Advanced trading education & strategies</p>
-        <p>Daily market learning & insights</p>
-        <p>Trusted trader community on Telegram</p>
-    </div>
-
-    <!-- DISCLAIMER -->
-    <div class="disclaimer">
-        This is for educational purposes only.<br>
-        Securities market investments are subject to market risks.
-    </div>
-
+    <a href="https://t.me/+KB7VDXpgU9wwYTM1" class="btn">👉 Join Now</a>
 </div>
 
-<!-- LIVE COUNTER SCRIPT -->
+<div class="sticky">
+    <a href="https://t.me/+KB7VDXpgU9wwYTM1" class="btn">🔥 Join Telegram Now</a>
+</div>
+
+<!-- EXIT POPUP -->
+<div class="popup" id="popup">
+    <div class="popup-content">
+        <h2>Wait! 🚨</h2>
+        <p>Free Trading Calls Miss Mat Karo</p>
+        <a href="https://t.me/+KB7VDXpgU9wwYTM1" class="btn">Join Now</a>
+    </div>
+</div>
+
 <script>
-let count = 33856;
+let count = 120;
 setInterval(()=>{
     count += Math.floor(Math.random()*3);
-    document.getElementById("count").innerText = count;
-},50000);
+    document.getElementById("count").innerText = count + " Users Watching";
+},2000);
+
+// Exit Intent Popup
+let shown = false;
+document.addEventListener("mouseleave", function(){
+    if(!shown){
+        document.getElementById("popup").style.display = "flex";
+        shown = true;
+    }
+});
 </script>
 
 </body>
 </html>
-
