@@ -11,23 +11,6 @@
 
 <!-- FONT AWESOME -->
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
-<!-- Meta Pixel Code -->
-<script>
-!function(f,b,e,v,n,t,s)
-{if(f.fbq)return;n=f.fbq=function(){n.callMethod?
-n.callMethod.apply(n,arguments):n.queue.push(arguments)};
-if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
-n.queue=[];t=b.createElement(e);t.async=!0;
-t.src=v;s=b.getElementsByTagName(e)[0];
-s.parentNode.insertBefore(t,s)}(window, document,'script',
-'https://connect.facebook.net/en_US/fbevents.js');
-fbq('init', '1316759156988431');
-fbq('track', 'PageView');
-</script>
-<noscript><img height="1" width="1" style="display:none"
-src="https://www.facebook.com/tr?id=1316759156988431&ev=PageView&noscript=1"
-/></noscript>
-<!-- End Meta Pixel Code -->
 
 <style>
 
@@ -164,6 +147,23 @@ body{
 }
 
 </style>
+<!-- Meta Pixel Code -->
+<script>
+!function(f,b,e,v,n,t,s)
+{if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+n.queue=[];t=b.createElement(e);t.async=!0;
+t.src=v;s=b.getElementsByTagName(e)[0];
+s.parentNode.insertBefore(t,s)}(window, document,'script',
+'https://connect.facebook.net/en_US/fbevents.js');
+fbq('init', '1743214833669141');
+fbq('track', 'PageView');
+</script>
+<noscript><img height="1" width="1" style="display:none"
+src="https://www.facebook.com/tr?id=1743214833669141&ev=PageView&noscript=1"
+/></noscript>
+<!-- End Meta Pixel Code -->
 </head>
 
 <body>
@@ -172,7 +172,7 @@ body{
 
 <section class="hero">
 
-  <img src="logo.png" alt="Logo">
+  <img src="logo.jpg">
 
   <div class="trader-name">
     ગુજરાતી TRADER
@@ -182,7 +182,7 @@ body{
   <p>Precision Signals • Smart Risk Management • Consistent Growth</p>
 
   <!-- CTA -->
-  <a href="https://t.me/+Kdjqm1jNFW1jMDVl" target="_blank" class="cta subscribe-btn">
+  <a href="https://t.me/+5TXSFShjfnM5NDM1" target="_blank" class="cta subscribe-btn">
     <i class="fab fa-telegram-plane"></i> Join Telegram
   </a>
 
@@ -200,50 +200,3 @@ body{
       <i class="fa-solid fa-bullseye"></i>
       <span>Accurate Entry, Exit & Target Levels</span>
     </div>
-
-    <div class="point">
-      <i class="fa-solid fa-shield"></i>
-      <span>Risk Management Focused Strategy</span>
-    </div>
-
-    <div class="point">
-      <i class="fa-solid fa-fire"></i>
-      <span>Daily Free & Premium Market Analysis</span>
-    </div>
-
-  </div>
-</section>
-
-<div class="footer">
-  ©️ 2026 Gujarati Trader • All Rights Reserved
-</div>
-
-<!-- TRACKING SCRIPT -->
-<script>
-const PAGEVIEW_KEY = "gt_pageview_tracked";
-const SUBSCRIBE_KEY = "gt_subscribe_tracked";
-
-/* PAGE VIEW */
-if (!localStorage.getItem(PAGEVIEW_KEY)) {
-    fbq('track', 'PageView');
-    localStorage.setItem(PAGEVIEW_KEY, "true");
-}
-
-/* TELEGRAM CLICK */
-document.querySelector(".subscribe-btn").addEventListener("click", function () {
-
-    if (!localStorage.getItem(SUBSCRIBE_KEY)) {
-
-        fbq('track', 'Lead');
-        fbq('trackCustom', 'TelegramSubscribe', {
-            source: 'Landing Page',
-            platform: 'Telegram'
-        });
-
-        localStorage.setItem(SUBSCRIBE_KEY, "true");
-    }
-});
-</script>
-
-</body>
-</html>
